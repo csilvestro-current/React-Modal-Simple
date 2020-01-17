@@ -1,24 +1,31 @@
 import React from 'react';
 import './App.css';
-import LandingModal from './components/LandingModal';
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from './components/Routes';
 
 function App() {
   return (
-    <div style={styles.container}>
-      <LandingModal />
-    </div>
+    <Router>
+      <Routes />
+    </Router>
   );
 }
-
 export default App;
 
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignContent: 'center',
-    background: 'gray',
-    height: '100vh',
-  }
-}
+// const styles = {
+//   //modal: {
+//     // display: 'flex',
+//     // flexDirection: 'column',
+//     // justifyContent: 'center',
+//     // alignContent: 'center',
+//     // background: 'gray',
+//     // height: '100vh',
+//   //}
+//   container: {
+//     display: 'flex',
+//     flexDirection: 'column',
+//     background: 'smokegrey',
+//     padding: '4%',
+//     height: '100vh',
+//   }
+// }
