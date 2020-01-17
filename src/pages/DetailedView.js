@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import DetailedItem from '../components/DetailedItem';
-
+import BackBtn from '../components/buttons/BackBtn';
 
 class DetailedView extends Component {
   state = {
@@ -37,9 +37,9 @@ class DetailedView extends Component {
     <div style={styles.container}>
       <section style={styles.deItem}>
         <BackBtn />
-        <DetailedItem />
+        <DetailedItem style={styles.deModal}/>
       </section>
-      <section>
+      <section style={styles.deItemContainer}>
         <h2>More like this</h2>
         <div>More list here....</div>
       </section>
@@ -62,9 +62,22 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     //justifyContent: 'center',
-    alignItems: 'center',
-    background: 'smokegrey',
+    //alignItems: 'center',
+    background: 'grey',
     padding: '4%',
     height: '100vh',
+  },
+  deItem: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  deItemContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: '2%',
+  },
+  deModal:{
+    marginLeft:'10%'
   }
 }
