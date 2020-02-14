@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import LandingModal from './components/LandingModal';
+import SignInModal from './components/SignInModal';
 
+
+///SignIn Modal with Local Storage
 function App() {
   return (
     <div style={styles.container}>
-      <LandingModal />
+      <SignInModal />
     </div>
   );
 }
